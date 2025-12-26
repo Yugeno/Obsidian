@@ -38,6 +38,12 @@ if typeof(clonefunction) == "function" then
     end
 end
 
+local Fonts = {}
+for _, v in ipairs(Enum.Font:GetEnums()) do
+	table.insert(Fonts, v.Name)
+end
+
+
 local ThemeManager = {}
 do
     local ThemeFields = { "FontColor", "MainColor", "AccentColor", "BackgroundColor", "OutlineColor" }
@@ -368,7 +374,7 @@ do
         groupbox:AddDropdown("FontFace", {
             Text = "Font Face",
             Default = "Code",
-            Values = { "BuilderSans", "Code", "Fantasy", "Gotham", "Jura", "Roboto", "RobotoMono", "SourceSans" },
+            Values = Fonts,
         })
 
         local ThemesArray = {}
