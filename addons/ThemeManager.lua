@@ -39,7 +39,7 @@ if typeof(clonefunction) == "function" then
 end
 
 local Fonts = {}
-for _, v in ipairs(Enum.Font:GetEnums()) do
+for _, v in ipairs(Enum.Font:GetEnumItems()) do
 	table.insert(Fonts, v.Name)
 end
 
