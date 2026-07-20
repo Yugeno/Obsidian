@@ -2133,7 +2133,7 @@ function Library:AddDraggableButton(...)
         local X, Y = Library:GetTextBounds(Text, Library.Scheme.Font, 16)
 
         Button.Text = Text
-        Button.Size = UDim2.fromOffset(X * 1.25, Y * 1.25)
+        Button.Size = UDim2.fromOffset(X * 1.25, Y * 2)
     end
 
     Library:MakeDraggable(Button, Button, true)
